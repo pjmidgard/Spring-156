@@ -404,7 +404,7 @@ class compression:
                                                 
                                                 
                                                                                           
-                                                        Number_of_the_file=(((Number_of_the_file*add_ones_together)+Add)//3)+T
+                                                        Number_of_the_file=(((Number_of_the_file*add_ones_together)+Add)//3)*Times_10
                                                         
                                                         if int(sda,2)<Number_of_the_file:
                                                             Times_10=0
