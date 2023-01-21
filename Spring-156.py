@@ -219,6 +219,7 @@ class compression:
                                     Times_10=1
                                     Times_7=0
                                     Times_11=-1
+                                    Times_12=1
                                     
                                     N_5=-1
                                     
@@ -260,9 +261,14 @@ class compression:
                                          
                                                 N_5=0
                                             if Times_10>=(2**24)-1:
-                                         
+                                                    
+                                                circuit.cp(Times_12,k1,k2)
+                                                Times_12=int(k2) 
                                                 
                                                 Times_10=1
+                                            if Times_12>=(2**24)-1:
+                                                Times_12=1
+                                                    
                                             if Times_11==(2**32)-1:
                                                 
                                                 
@@ -384,7 +390,7 @@ class compression:
                                                 
                                                         
             
-                                                if C==1 and T!=0:
+                                                if C==1 and Times_12!=0:
                                                         Equal_info_between_of_the_cirlce_of_the_file4=Equal_info_between_of_the_cirlce_of_the_file4
                                                         lenf6=len(Equal_info_between_of_the_cirlce_of_the_file4)
                                                        
@@ -403,11 +409,14 @@ class compression:
                                                         add_ones_together=Hole_Number_information
                                                 
                                                 
-                                                                                          
+                                                                                         
                                                         Number_of_the_file=(((Number_of_the_file*add_ones_together)+Add)//3)*Times_10
                                                         
                                                         if int(sda,2)<Number_of_the_file:
                                                             Times_10=0
+                                                            Times_12=0
+                                                                                      
+                                                            Number_of_the_file=(((Number_of_the_file*add_ones_together)+Add)//3)*Times_10
                                                         
                                                         Times_half_Real+=1
                                                         
@@ -439,14 +448,14 @@ class compression:
                                                 Make_togher=Times_6
                                                 
                                                 add_bits=""
-                                                if C==1 and T!=0:
+                                                if C==1 and Times_12!=0:
                                                         Circle_times2=Circle_times2+1
     
                                                 lenf9=len(Equal_info_between_of_the_cirlce_of_the_file_17)
                                                 #print(Circle_times2)
                                                 
                                                 
-                                                if  Circle_times2==1:
+                                                if  Circle_times2==Times_12:
                                                         Circle_times2=0
                                                         
                                                         if int(sda,2)<=Number_of_the_file:  
@@ -588,6 +597,19 @@ class compression:
                                                        T1=len(Time_Real3)
                                                        Time_Real1=format(T1,'016b')
                                                        Reality=Time_Real1+Time_Real3
+
+
+
+                                                       Time_Real=bin(Times_half_Real)[2:]
+                                                       T1=len(Time_Real)
+                                                       T2=(T1//8)+1
+                                                       T2=T2*8
+
+                                                       C="0"+str(T2)+"b"
+                                                       Time_Real3=format(Times_12,C)
+                                                       T1=len(Time_Real3)
+                                                       Time_Real1=format(T1,'016b')
+                                                       Times_14=Time_Real1+Time_Real3
                                                        #print(T)
 
 
@@ -597,11 +619,11 @@ class compression:
                                                        if Extact==Equal_info_between_of_the_cirlce_of_the_file_17 and Times_10!=0:
 
 
-                                                               Equal_info_between_of_the_cirlce_of_the_file_17=Equal_info_between_of_the_cirlce_of_the_file2+Equal_info_between_of_the_cirlce_of_the_file3+Add_N+long3+Time_Real2+Reality+Info
+                                                               Equal_info_between_of_the_cirlce_of_the_file_17=Equal_info_between_of_the_cirlce_of_the_file2+Equal_info_between_of_the_cirlce_of_the_file3+Add_N+long3+Time_Real2+Reality+Times_14+Info
                                                                Extract1=1
                                                       
                                                        if Extact==Equal_info_between_of_the_cirlce_of_the_file_17 and Times_10==0:
-                                                               Equal_info_between_of_the_cirlce_of_the_file_17=Equal_info_between_of_the_cirlce_of_the_file2+Equal_info_between_of_the_cirlce_of_the_file3+Add_N+long3+Time_Real2+Reality+sda
+                                                               Equal_info_between_of_the_cirlce_of_the_file_17=Equal_info_between_of_the_cirlce_of_the_file2+Equal_info_between_of_the_cirlce_of_the_file3+Add_N+long3+Time_Real2+Reality+Times_14+sda
                                                                Extract1=1  
                                                        if int(sda,2)==0:
                                                                Equal_info_between_of_the_cirlce_of_the_file_17=Compress_zeros
@@ -772,12 +794,22 @@ class compression:
                                                 Real_C=int(Equal_info_between_of_the_cirlce_of_the_file[0:16],2)
                                                 Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[16:]
                                                 T_Real=int(Equal_info_between_of_the_cirlce_of_the_file[:Real_C],2)
+                                                
                                               
                                                 Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[Real_C:]
 
                                                 Real_C=int(Equal_info_between_of_the_cirlce_of_the_file[0:16],2)
                                                 Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[16:]
                                                 Reality=int(Equal_info_between_of_the_cirlce_of_the_file[:Real_C],2)
+
+                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[Real_C:]
+                                                
+
+                                                Real_C=int(Equal_info_between_of_the_cirlce_of_the_file[0:16],2)
+                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[16:]
+                                                T14=int(Equal_info_between_of_the_cirlce_of_the_file[:Real_C],2)
+                                                #print(T14)
+                                        
                                                 #print(Reality)
                                               
                                                 Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[Real_C:]
@@ -793,7 +825,7 @@ class compression:
                                         
                                         	
     
-                                        if C==1 and T!=0:
+                                        if C==1 and T14!=0:
                                                 Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file
                                                 lenf6=len(Equal_info_between_of_the_cirlce_of_the_file)
                                                 
@@ -812,6 +844,8 @@ class compression:
                                                         add_ones_together=Hole_Number_information
                                                         Reality2+=1
                                                         Number_of_the_file=(((Number_of_the_file*add_ones_together)+Add)//3)*T_Real
+
+                                                        
                                                         #print(Number_of_the_file)
                                              
                                     #####################################################################################################################################################
@@ -829,7 +863,7 @@ class compression:
                                         Make_togher=Times_6
                                         Number_add_plus_one=""
                                         add_bits=""
-                                        if C==1 and T!=0:
+                                        if C==1 and T14!=0:
                                                 Circle_times2=Circle_times2+1
 
                                         lenf9=len(Equal_info_between_of_the_cirlce_of_the_file_17)
@@ -839,9 +873,9 @@ class compression:
                                           
                                         
                                                 
-                                        if  Circle_times2==1:
+                                        if  Circle_times2==T14:
                                         	   
-                                            if C==1 and T==0:
+                                            if C==1 and T14==0:
                                             	Equal_info_between_of_the_cirlce_of_the_file_17=Equal_info_between_of_the_cirlce_of_the_file
                                             	lenf=len(Equal_info_between_of_the_cirlce_of_the_file_17)
                                             	add_bits=""
@@ -869,7 +903,7 @@ class compression:
                                             	
                                             
                                      
-                                            if C==1 and T!=0:
+                                            if C==1 and T14!=0:
  
                                             	Equal_info_between_of_the_cirlce_of_the_file_17=bin(Number_of_the_file)[2:]
                                             	lenf14=len(Equal_info_between_of_the_cirlce_of_the_file_17)
