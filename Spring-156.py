@@ -204,7 +204,7 @@ class compression:
                                                     Nuber_zero_or_else=int(sda,2)
                                                     long_of_file+=1
                                                     #print(long_of_file)
-                                                    if Nuber_zero_or_else==0 and long_of_file<(2**112):
+                                                    if Nuber_zero_or_else==0 and long_of_file<(2**136):
                                                                                                  long_of_file_N=format(long_of_file,'08b')
                                                                                                  Compress_zeros=long_of_file_N
                                                                                              
@@ -669,7 +669,7 @@ class compression:
                                    
                                     Equal_info_between_of_the_cirlce_of_the_file_17=""
                                     lenf9=len(Equal_info_between_of_the_cirlce_of_the_file_17)
-                                    if  len(sda)<=(14*8):
+                                    if  len(sda)<=(17*8):
                                                  
                                                     Equal_info_between_of_the_cirlce_of_the_file_17=Equal_info_between_of_the_cirlce_of_the_file_17
                                                     #print(Number_zeroes)
