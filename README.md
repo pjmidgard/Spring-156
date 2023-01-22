@@ -11,4 +11,6 @@ General-purpose compression
 
 Need cubits (2**32)+2 and 64 bits
 
+How to use: pip install qiskit
+
 
