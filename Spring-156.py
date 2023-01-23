@@ -602,7 +602,7 @@ class compression:
 
 
 
-                                                       Time_Real=bin(Times_half_Real)[2:]
+                                                       Time_Real=bin(Times_12:]
                                                        T1=len(Time_Real)
                                                        T2=(T1//8)+1
                                                        T2=T2*8
@@ -621,8 +621,11 @@ class compression:
                                                        Time_Real3=format(Divided_corrdiates,C)
                                                        T1=len(Time_Real3)
                                                        Time_Real1=format(T1,'016b')
-                                                       Divided_corrdiates=Time_Real1+Time_Real3
-                                                       #print(T)
+                                                       Times_14=Time_Real1+Time_Real3
+                                                       Time_Real=bin(Divided_corrdiates)[2:]
+                                                       T1=len(Time_Real)
+                                                       T2=(T1//8)+1
+                                                       T2=T2*8
 
 
 
