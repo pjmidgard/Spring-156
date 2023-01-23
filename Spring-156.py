@@ -600,12 +600,13 @@ class compression:
                                                        Time_Real1=format(T1,'016b')
                                                        Reality=Time_Real1+Time_Real3
 
+                                                       
 
 
-                                                       Time_Real=bin(Times_12:]
-                                                       T1=len(Time_Real)
-                                                       T2=(T1//8)+1
-                                                       T2=T2*8
+                                                   
+                                                   
+                                                      
+
 
                                                        C="0"+str(T2)+"b"
                                                        Time_Real3=format(Times_12,C)
@@ -622,10 +623,8 @@ class compression:
                                                        T1=len(Time_Real3)
                                                        Time_Real1=format(T1,'016b')
                                                        Times_14=Time_Real1+Time_Real3
-                                                       Time_Real=bin(Divided_corrdiates)[2:]
-                                                       T1=len(Time_Real)
-                                                       T2=(T1//8)+1
-                                                       T2=T2*8
+                                                     
+                                                       
 
 
 
