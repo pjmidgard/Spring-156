@@ -616,7 +616,7 @@ class compression:
                                                        Time_Real3=format(Divided_corrdiates,C)
                                                        T1=len(Time_Real3)
                                                        Time_Real1=format(T1,'016b')
-                                                       Reality=Time_Real1+Time_Real3
+                                                       Divided_corrdiates1=Time_Real1+Time_Real3
                                                      
                                                        
 
@@ -627,11 +627,11 @@ class compression:
                                                        if Extact==Equal_info_between_of_the_cirlce_of_the_file_17 and Times_10!=0:
 
 
-                                                               Equal_info_between_of_the_cirlce_of_the_file_17=Equal_info_between_of_the_cirlce_of_the_file2+Equal_info_between_of_the_cirlce_of_the_file3+Add_N+long3+Time_Real2+Reality+Divided_corrdiates+Info
+                                                               Equal_info_between_of_the_cirlce_of_the_file_17=Equal_info_between_of_the_cirlce_of_the_file2+Equal_info_between_of_the_cirlce_of_the_file3+Add_N+long3+Time_Real2+Reality+Divided_corrdiates1+Info
                                                                Extract1=1
                                                       
                                                        if Extact==Equal_info_between_of_the_cirlce_of_the_file_17 and Times_10==0:
-                                                               Equal_info_between_of_the_cirlce_of_the_file_17=Equal_info_between_of_the_cirlce_of_the_file2+Equal_info_between_of_the_cirlce_of_the_file3+Add_N+long3+Time_Real2+Reality+Divided_corrdiates+sda
+                                                               Equal_info_between_of_the_cirlce_of_the_file_17=Equal_info_between_of_the_cirlce_of_the_file2+Equal_info_between_of_the_cirlce_of_the_file3+Add_N+long3+Time_Real2+Reality+Divided_corrdiates1+sda
                                                                Extract1=1  
                                                        if int(sda,2)==0:
                                                                Equal_info_between_of_the_cirlce_of_the_file_17=Compress_zeros
