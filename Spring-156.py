@@ -831,7 +831,7 @@ class compression:
                                                 Real_C=int(Equal_info_between_of_the_cirlce_of_the_file[0:16],2)
                                                 Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[16:]
                                                 Divided_corrdiates=int(Equal_info_between_of_the_cirlce_of_the_file[:Real_C],2)
-                                                print(Divided_corrdiates)
+                                                #print(Divided_corrdiates)
                                                 #print(T14)
                                         
                                                 #print(Reality)
