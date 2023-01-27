@@ -204,7 +204,7 @@ class compression:
                                                     Nuber_zero_or_else=int(sda,2)
                                                     long_of_file+=1
                                                     #print(long_of_file)
-                                                    if Nuber_zero_or_else==0 and long_of_file<(2**160):
+                                                    if Nuber_zero_or_else==0 and long_of_file<=(2**136):
                                                                                                  long_of_file_N=format(long_of_file,'08b')
                                                                                                  Compress_zeros=long_of_file_N
                                                                                              
@@ -239,7 +239,8 @@ class compression:
                                                 k2=1
                                             
                                             
-                                        
+                                            #N_5+=1
+                                            #Times_11+=1
                                     
                                             circuit.cp(N_5, k1, k2)
                                             
@@ -257,7 +258,8 @@ class compression:
                                                 
                                                 
                                                 circuit.cp(Times_10,k1,k2)
-                                                Times_10=int(k2) 
+                                                Times_10=int(k2)
+                                                #Times_10+=1
                                                 
                                          
                                                 N_5=0
@@ -265,12 +267,13 @@ class compression:
                                                     
                                                 circuit.cp(Times_12,k1,k2)
                                                 Times_12=int(k2) 
-                                                
+                                                #Times_12=+1
                                                 Times_10=1
                                             if Times_12>=(2**24)-1:
                                                 
                                                 circuit.cp(Divided_corrdiates,k1,k2)
-                                                Divided_corrdiates=int(k2) 
+                                                Divided_corrdiates=int(k2)
+                                                #Divided_corrdiates+=1
                                                 
                                                 
                                             if Divided_corrdiates>=(2**24)-1:
@@ -543,16 +546,18 @@ class compression:
 
 
 
-                                                       Time_Real=bin(T)[2:]
+                                                       Time_Real=bin(Times_12)[2:]
                                                        T1=len(Time_Real)
                                                        T2=(T1//8)+1
                                                        T2=T2*8
 
                                                        C="0"+str(T2)+"b"
-                                                       Time_Real3=format(T,C)
+                                                       Time_Real3=format(Times_12,C)
                                                        T1=len(Time_Real3)
                                                        Time_Real1=format(T1,'016b')
                                                        Time_Real2=Time_Real1+Time_Real3
+                                                       
+                                                
 
 
 
@@ -612,11 +617,14 @@ class compression:
                                                        T2=(T1//8)+1
                                                        T2=T2*8
 
+                                                       Divided_corrdiates1=""
+
                                                        C="0"+str(T2)+"b"
                                                        Time_Real3=format(Divided_corrdiates,C)
                                                        T1=len(Time_Real3)
                                                        Time_Real1=format(T1,'016b')
                                                        Divided_corrdiates1=Time_Real1+Time_Real3
+                                                       #print(Divided_corrdiates1)
                                                      
                                                        
 
@@ -677,7 +685,7 @@ class compression:
                                    
                                     Equal_info_between_of_the_cirlce_of_the_file_17=""
                                     lenf9=len(Equal_info_between_of_the_cirlce_of_the_file_17)
-                                    if  len(sda)<=(20*8):
+                                    if  len(sda)<=(17*8):
                                                  
                                                     Equal_info_between_of_the_cirlce_of_the_file_17=Equal_info_between_of_the_cirlce_of_the_file_17
                                                     #print(Number_zeroes)
@@ -786,7 +794,7 @@ class compression:
                                                
                                                 Real_C=int(Equal_info_between_of_the_cirlce_of_the_file[0:8],2)
                                                 Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[8:]
-                                                T=int(Equal_info_between_of_the_cirlce_of_the_file[:Real_C],2)
+                                                T14=int(Equal_info_between_of_the_cirlce_of_the_file[:Real_C],2)
                                                 Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[Real_C:]
 
                                                 Real_C=int(Equal_info_between_of_the_cirlce_of_the_file[0:8],2)
@@ -813,18 +821,21 @@ class compression:
                                                 Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[Real_C:]
                                                 
 
-                                                Real_C=int(Equal_info_between_of_the_cirlce_of_the_file[0:16],2)
-                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[16:]
-                                                T14=int(Equal_info_between_of_the_cirlce_of_the_file[:Real_C],2)
+                                                
+
+                                                
                                                 #print(T14)
                                         
                                                 #print(Reality)
                                               
-                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[Real_C:]
-                                                
                                                 Real_C=int(Equal_info_between_of_the_cirlce_of_the_file[0:16],2)
-                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[16:]                                                
+                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[16:]
                                                 Divided_corrdiates=int(Equal_info_between_of_the_cirlce_of_the_file[:Real_C],2)
+                                                print(Divided_corrdiates)
+                                                #print(T14)
+                                        
+                                                #print(Reality)
+                                              
                                                 Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[Real_C:]
                                                 lenf6=len(Equal_info_between_of_the_cirlce_of_the_file)
                                                 Reality2=0
