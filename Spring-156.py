@@ -786,56 +786,61 @@ class compression:
                                         if   Circle_times2==0:
                                 
                                                 lenf6=len(Equal_info_between_of_the_cirlce_of_the_file)
-                                                
+
+                                                #0812
+
                                                 Real_C=int(Equal_info_between_of_the_cirlce_of_the_file[0:8],2)
                                                 Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[8:]
                                                 Deep5=int(Equal_info_between_of_the_cirlce_of_the_file[:Real_C],2)
                                                 Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[Real_C:]
-                                               
+
+
+                                                #0801
+
                                                 Real_C=int(Equal_info_between_of_the_cirlce_of_the_file[0:8],2)
                                                 Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[8:]
-                                                T14=int(Equal_info_between_of_the_cirlce_of_the_file[:Real_C],2)
+                                                T_Real=int(Equal_info_between_of_the_cirlce_of_the_file[:Real_C],2)
                                                 Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[Real_C:]
+
+                                                #10ffff
 
                                                 Real_C=int(Equal_info_between_of_the_cirlce_of_the_file[0:8],2)
                                                 Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[8:]
                                                 Add=int(Equal_info_between_of_the_cirlce_of_the_file[:Real_C],2)
                                                 Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[Real_C:]
-                                                
+
+                                                #18020d47
+
                                                 Real_C=int(Equal_info_between_of_the_cirlce_of_the_file[0:8],2)
                                                 Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[8:]
                                                 long=int(Equal_info_between_of_the_cirlce_of_the_file[:Real_C],2)
                                                 Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[Real_C:]
-                                                
+
+
+                                                #0010ffff                                                
+
                                                 Real_C=int(Equal_info_between_of_the_cirlce_of_the_file[0:16],2)
                                                 Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[16:]
-                                                T_Real=int(Equal_info_between_of_the_cirlce_of_the_file[:Real_C],2)
-                                                
-                                              
+                                                T14=int(Equal_info_between_of_the_cirlce_of_the_file[:Real_C],2)
                                                 Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[Real_C:]
 
+
+                                                #0010ffff
+                                                
                                                 Real_C=int(Equal_info_between_of_the_cirlce_of_the_file[0:16],2)
                                                 Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[16:]
                                                 Reality=int(Equal_info_between_of_the_cirlce_of_the_file[:Real_C],2)
+                                                
+                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[Real_C:]
+
+                                                #000801
+                                                Real_C=int(Equal_info_between_of_the_cirlce_of_the_file[0:16],2)
+                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[16:]
+                                                Divided_corrdiates=int(Equal_info_between_of_the_cirlce_of_the_file[:Real_C],2)
 
                                                 Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[Real_C:]
                                                 
 
-                                                
-
-                                                
-                                                #print(T14)
-                                        
-                                                #print(Reality)
-                                              
-                                                Real_C=int(Equal_info_between_of_the_cirlce_of_the_file[0:16],2)
-                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[16:]
-                                                Divided_corrdiates=int(Equal_info_between_of_the_cirlce_of_the_file[:Real_C],2)
-                                                #print(Divided_corrdiates)
-                                                #print(T14)
-                                        
-                                                #print(Reality)
-                                              
                                                 Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[Real_C:]
                                                 lenf6=len(Equal_info_between_of_the_cirlce_of_the_file)
                                                 Reality2=0
