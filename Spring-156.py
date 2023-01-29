@@ -209,8 +209,8 @@ class compression:
                                                                                                  Compress_zeros=long_of_file_N
                                                                                              
                                     from qiskit.circuit import QuantumCircuit
-                                    k1=0
-                                    k2=1
+                                    k1=-2
+                                    k2=-1
                                     
                                    
                                     circuit = QuantumCircuit((2**32)+2) 
@@ -235,8 +235,8 @@ class compression:
                                             k1+=1
                                             k2+=1
                                             if k1==2**32:
-                                                k1=0
-                                                k2=1
+                                                k1=-2
+                                                k2=-1
                                             
                                             
                                             #N_5+=1
