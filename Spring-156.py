@@ -212,7 +212,8 @@ class compression:
                                     k1=-2
                                     k2=-1
                                     k3=0
-                                    k6=0      
+                                    k6=0     
+                                    k7=0
                                     
                                    
                                     circuit = QuantumCircuit((2**32)+2) 
@@ -238,11 +239,13 @@ class compression:
                                             k2+=1
                                             k3+=1
                                             k6+=1
+                                            k7+=1
                                             if k1==2**32:
                                                 k1=-1
                                                 k2=0
                                                 k3=1
                                                 k6=1
+                                                k7=1
                                             
                                             
                                             #N_5+=1
@@ -263,16 +266,16 @@ class compression:
                                             
                                                 
                                                 
-                                                circuit.cp(Times_10,k1,k3)
-                                                Times_10=int(k3)
+                                                circuit.cp(Times_10,k1,k7)
+                                                Times_10=int(k7)
                                                 #Times_10+=1
                                                 
                                          
                                                 N_5=0
                                             if Times_10>=(2**24)-1:
                                                     
-                                                circuit.cp(Times_12,k1,k2)
-                                                Times_12=int(k2) 
+                                                circuit.cp(Times_12,k1,k3)
+                                                Times_12=int(k3) 
                                                 #Times_12=+1
                                                 Times_10=1
                                             if Times_12>=(2**24)-1:
