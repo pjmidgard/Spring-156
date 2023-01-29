@@ -212,6 +212,7 @@ class compression:
                                     k1=-2
                                     k2=-1
                                     k3=0
+                                    k6=0      
                                     
                                    
                                     circuit = QuantumCircuit((2**32)+2) 
@@ -236,10 +237,12 @@ class compression:
                                             k1+=1
                                             k2+=1
                                             k3+=1
+                                            k6+=1
                                             if k1==2**32:
                                                 k1=-1
                                                 k2=0
                                                 k3=1
+                                                k6=1
                                             
                                             
                                             #N_5+=1
@@ -274,7 +277,7 @@ class compression:
                                                 Times_10=1
                                             if Times_12>=(2**24)-1:
                                                 
-                                                circuit.cp(Divided_corrdiates,k1,k2)
+                                                circuit.cp(Divided_corrdiates,k1,k6)
                                                 Divided_corrdiates=int(k2)
                                                 #Divided_corrdiates+=1
                                                 
