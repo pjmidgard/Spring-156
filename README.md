@@ -10,8 +10,8 @@ How to use: pip install qiskit
 
 General-purpose compression
 
-Need Quantum computer cubits (2**32)+2 and 64 bits
+Need for Spring-156 Quantum computer cubits (2**32)+2 and 64 bits
 
-
+Need for Spring-157 Quantum computer cubits (2**33)+2 and 64 bits
 
 
