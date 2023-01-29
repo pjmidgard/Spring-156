@@ -213,7 +213,7 @@ class compression:
                                     k2=0
                                     k3=1000
                                     k4=0
-                                    k5=0
+                                    
                                     k6=0
                                     k7=0
                                     k8=0
@@ -241,7 +241,7 @@ class compression:
                                             
                                             k1+=1
                                             k2+=1
-                                            k5+=1
+                                           
                                             k6+=1
                                             k7+=1
                                             k8+=1
@@ -253,7 +253,7 @@ class compression:
                                             if k1>=2**32:
                                                 k1=-1
                                                 k2=0
-                                                k5=1
+                                                
                                                 k6=1
                                                 k7=1
                                                 k8=1
