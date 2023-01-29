@@ -211,7 +211,7 @@ class compression:
                                     from qiskit.circuit import QuantumCircuit
                                     k1=-2
                                     k2=-1
-                                    k3=1
+                                    k3=0
                                     
                                    
                                     circuit = QuantumCircuit((2**32)+2) 
@@ -237,8 +237,8 @@ class compression:
                                             k2+=1
                                             k3+=1
                                             if k1==2**32:
-                                                k1=-2
-                                                k2=-1
+                                                k1=-1
+                                                k2=0
                                                 k3=1
                                             
                                             
