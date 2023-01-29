@@ -264,7 +264,7 @@ class compression:
                                                 
                                                 
                                                 circuit.cp(Times_10,k1,k3)
-                                                Times_10=int(k2)
+                                                Times_10=int(k3)
                                                 #Times_10+=1
                                                 
                                          
@@ -278,7 +278,7 @@ class compression:
                                             if Times_12>=(2**24)-1:
                                                 
                                                 circuit.cp(Divided_corrdiates,k1,k6)
-                                                Divided_corrdiates=int(k2)
+                                                Divided_corrdiates=int(k6)
                                                 #Divided_corrdiates+=1
                                                 
                                                 
