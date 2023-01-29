@@ -215,6 +215,7 @@ class compression:
                                     k4=0
                                     k5=0
                                     k6=0
+                                    k7=0
                                     
                                    
                                     circuit = QuantumCircuit((2**12)+2) 
@@ -241,6 +242,7 @@ class compression:
                                             k2+=1
                                             k5+=1
                                             k6+=1
+                                            k7+=1
                                             if Number_of_the_file>int(sda)+1000:
                                                     k3=1
                                             else:
@@ -251,6 +253,7 @@ class compression:
                                                 k2=0
                                                 k5=1
                                                 k6=1
+                                                k7=1
                                             
                                             
                                             #N_5+=1
@@ -280,8 +283,8 @@ class compression:
                                                 N_5=0
                                             if Times_10>=(2**24)-1:
                                                     
-                                                circuit.cp(Times_12,k1,k2)
-                                                Times_12=int(k2) 
+                                                circuit.cp(Times_12,k1,k7)
+                                                Times_12=int(k7) 
                                                 #Times_12=+1
                                                 Times_10=1
                                             if Times_12>=(2**24)-1:
